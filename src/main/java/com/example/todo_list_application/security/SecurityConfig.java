@@ -35,7 +35,7 @@ public class SecurityConfig {
 //                    .authorizeHttpRequests((authorize) -> authorize.anyRequest()
 //                            .authenticated())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("todolist/welcome", "todolist/adduser", "todolist/authenticate").permitAll()
+                        .requestMatchers("/todolist/welcome", "/todolist/adduser", "/todolist/authenticate").permitAll()
                         .requestMatchers("/todolist/**").authenticated()
                 )
                 .sessionManagement(session -> session
